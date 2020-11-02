@@ -1,4 +1,4 @@
-#Ontto nelio
+#Leikitään luokilla ja piirretään ontto nelio
 
 class Piirto():
 
