@@ -1,0 +1,3 @@
+Tässä kansiossa olevat asiat tarvitsee pygame kirjastoa.
+
+Ohjeet pygame:n lataamiseen on polussa main/README.md
