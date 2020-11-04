@@ -2,6 +2,8 @@
 
 Python ohjelmointi kurssilla tehtyjä juttuja.
 
+Perunakoodia siellä ja sipulikoodia täällä~
+
 
 Jotkut hommelit vaati pygame kirjastoa (https://www.pygame.org/news)
 
