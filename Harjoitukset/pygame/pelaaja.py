@@ -45,7 +45,7 @@ plr = Player(0.5*displayWidth, 0.5*displayHeight)
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit(0)
+            pygame.quit()
             quit()
         
     #Player Controls
