@@ -16,12 +16,12 @@ class Player:
     def __init__(self, posX, posY):
         self.posX = posX
         self.posY = posY
-        self.playerSpeed = 0.1
+        self.playerSpeed = 0.2
         
 
     #Pelaajan piirto
     def displayPlayer(self):
-        pygame.draw.circle(screen, (100,0,200),(int(self.posX),int(self.posY)), 10)
+        pygame.draw.circle(screen, (100,0,200),(int(self.posX),int(self.posY)), 20)
     
     #Pelaajan liikkuminen eri suuntiin
     def movePlayerDown(self):
@@ -48,30 +48,19 @@ while True:
             pygame.quit(0)
             quit()
         
-
+    #Player Controls
     keys = pygame.key.get_pressed()
 
-
-    if event.type == pygame.KEYDOWN:
-        if keys == pygame.K_LEFT or keys == ord('a'):
-            plr.movePlayerLeft
-        if keys == pygame.K_RIGHT or keys == ord('d'):
-            plr.movePlayerRight
-        if keys == pygame.K_UP or keys == ord('w'):
-            plr.movePlayerUp
-        if keys == pygame.K_DOWN or keys == ord('s'):
-            plr.movePlayerDown
-
-    if(keys[pygame.K_UP]):
+    if(keys[pygame.K_w] or keys[pygame.K_UP]):
         plr.movePlayerUp()
-    elif(keys[pygame.K_DOWN]):
+    if(keys[pygame.K_s] or keys[pygame.K_DOWN]):
         plr.movePlayerDown()
-    elif(keys[pygame.K_LEFT]):
+    if(keys[pygame.K_a] or keys[pygame.K_LEFT]):
         plr.movePlayerLeft()
-    elif(keys[pygame.K_RIGHT]):
-        plr.movePlayerRight() 
+    if(keys[pygame.K_d] or keys[pygame.K_RIGHT]):
+        plr.movePlayerRight()
 
+    #Rendering
     screen.fill((0,0,0))
-
     plr.displayPlayer()
     pygame.display.update()
