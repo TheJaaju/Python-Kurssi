@@ -67,18 +67,18 @@ ball4 = Ball(350,123,0.5,1,20)
 
 balls = [ball,ball2,ball3,ball4]
 
-def checkBallCollision(ball1, ball2):
-    bdistance = math.hypot(ball1.position[0] - ball2.position[1], ball1.position[1] - ball2.position[1])
-    unit1x = ball1.unitVector[0]
+def checkBallCollision(ball, ball2):
+    bdistance = math.hypot(ball.position[0] - ball2.position[1], ball.position[1] - ball2.position[1])
+    unit1x = ball.unitVector[0]
     unit1y = ball.unitVector[1]
     unit2x = ball2.unitVector[0]
     unit2y = ball2.unitVector[1]
 
-    collisionDistance = ball1.r + ball2.r
+    collisionDistance = ball.r + ball2.r
 
     if (bdistance <= collisionDistance):
-        ball1.unitVector[0] = unit2x
-        ball1.unitVector[1] = unit2y
+        ball.unitVector[0] = unit2x
+        ball.unitVector[1] = unit2y
         ball2.unitVector[0] = unit1x
         ball2.unitVector[1] = unit1y
 
