@@ -30,9 +30,11 @@ def drawSurfRect(rectWidth,rectHeight):
 
 #Player
 class Player:
-    def __init__(self,posX,posY,r):
-        self.posx = posX
-        self.posy = posY
+    def __init__(self,posX,posY,height,width,r):
+        self.posX = posX
+        self.posY = posY
+        self.height = height
+        self.width = width
         self.plrSpeed = 0.2
         self.r = r
 
@@ -40,17 +42,12 @@ class Player:
         self.length = math.sqrt(posX*posX + posY*posY)
         self.unitVector = [posX / self.length, posY / self.length]
 
-
-
-
-
-
-
+        #pygame.draw.rect(Surface, color, Rect, width=0)
 
 
     
     def drawPlayer(self):
-        pygame.draw.rect(gameDisplay, (255,255,255),(int(self.posX),int(self.posY)),20)
+        pygame.draw.rect(gameDisplay, (255,255,255),(self.width,self.height),20)
 
     def moveLeft(self):
         self.posX -= self.plrSpeed
@@ -92,8 +89,8 @@ leftX,leftY = 0,0
 rightX,rigthY = 400,0
 
 
-plr = Player(100,-300)
-ball = Ball(0,0,0,0,10)
+plr = Player(100,-300,50,20,0)
+ball = Ball(1,1,1,1,10)
 
 
 def checkPlayerCollision(plr):

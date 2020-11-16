@@ -26,7 +26,7 @@ def drawSurfRect(rectWidth,rectHeight):
 class Ball:
     def __init__(self, posx, posy, velx, vely, r):
         self.position = [posx, posy]
-        self.speedMagnitude = 0.5
+        self.speedMagnitude = 2.5
         self.dirx, self.diry = velx, vely
 
         self.r = r
