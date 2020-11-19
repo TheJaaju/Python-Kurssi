@@ -60,8 +60,8 @@ bottomX, bottomY = 0,710
 leftX, leftY = 0,0
 rightX, rightY = 1270,0
 
-ball = Ball(200,400,1,-1,20)
-ball2 = Ball(300,200,-1,1,10)
+ball = Ball(200,400,1,-1,200)
+ball2 = Ball(700,200,-1,1,100)
 ball3 = Ball(100,260,1,1,5)
 ball4 = Ball(350,123,0.5,1,20)
 
